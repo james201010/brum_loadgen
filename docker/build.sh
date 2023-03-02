@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t adfinmod_loadgen_pre .
+docker build -t brum_loadgen .

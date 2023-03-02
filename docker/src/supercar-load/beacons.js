@@ -570,7 +570,7 @@ exports.standardBeacon = function() {
     "gs": [],
     "up": [
         "http",
-        "www.ad-financial.com",
+        "Supercars.com",
         "home",
         "styles",
         "bootstrap.css",
