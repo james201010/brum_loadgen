@@ -1,0 +1,13 @@
+{
+  "name": "NodeLoad",
+  "version": "1.0.1",
+  "private": true,
+  "dependencies": {
+  	"eum-utilities": "^0.2.0",
+    "http": "0.0.0",
+    "lodash": "^4.17.4",
+    "needle": "^1.0.0",
+    "winston": "^2.3.1",
+    "uuid": "^3.1.0"
+  }
+}
