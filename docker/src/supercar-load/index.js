@@ -71,7 +71,7 @@ var getPagesForSession = function(sessionGuid, isCloud, traffic, speed, loopCoun
                 });
 
     pageList.push({ host : appBaseUrl,
-                    page : "/enquire.do"+pageSuffix,
+                    page : "/enquire.do?query=save"+pageSuffix,
                     traffic: traffic,
                     speed: speed,
                     drop : dropArray[2],
@@ -96,7 +96,7 @@ var getPagesForSession = function(sessionGuid, isCloud, traffic, speed, loopCoun
 	
 	if (lodash.random(1, 10) % 5 == 0) {
 	    pageList.push({ host : appBaseUrl,
-		        page : "/enquire.do",
+		        page : "/enquire.do?query=save",
 		        traffic: traffic,
 		        speed: speed,
 		        drop : dropArray[2],
