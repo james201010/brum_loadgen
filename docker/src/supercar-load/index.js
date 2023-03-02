@@ -70,6 +70,15 @@ var getPagesForSession = function(sessionGuid, isCloud, traffic, speed, loopCoun
                     headers: {"deployment": deployment, "sessionId": sessionGuid}
                 });
 
+    pageList.push({ host : appBaseUrl,
+                    page : "/enquire.do"+pageSuffix,
+                    traffic: traffic,
+                    speed: speed,
+                    drop : dropArray[2],
+                    beacon : "standardBeacon",
+                    method: "get",
+                    headers: {"deployment": deployment, "sessionId": sessionGuid}
+                });
 
 // these two branch, one up and one down
 
