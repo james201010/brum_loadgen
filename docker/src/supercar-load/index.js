@@ -71,7 +71,7 @@ var getPagesForSession = function(sessionGuid, isCloud, traffic, speed, loopCoun
                 });
 
     pageList.push({ host : appBaseUrl,
-                    page : "/enquire.do?query=save"+pageSuffix,
+                    page : "/enquire.do?car=1&carName=V8%A0Vantage"+pageSuffix,
                     traffic: traffic,
                     speed: speed,
                     drop : dropArray[2],
