@@ -49,7 +49,19 @@ var getPagesForSession = function(sessionGuid, isCloud, traffic, speed, loopCoun
                     method: "get",
                     headers: {"deployment": deployment, "sessionId": sessionGuid}
                 });
+
+    pageList.push({ host : appBaseUrl,
+                    page : "/car.do?query=car&cid=4",
+                    traffic: traffic,
+                    speed: speed,
+                    drop : dropArray[0],
+                    beacon : "standardBeacon",
+                    method: "get",
+                    headers: {"deployment": deployment, "sessionId": sessionGuid}
+                });
     
+    
+
     pageList.push({ host : appBaseUrl,
                     page : "/supercars.do",
                     traffic: "light",
