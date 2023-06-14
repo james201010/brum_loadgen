@@ -1,2 +1,2 @@
 # brum_loadgen
-Breowser RUM Load Generation
+Browser RUM Load Generation
