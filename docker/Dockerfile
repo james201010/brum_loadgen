@@ -16,4 +16,6 @@ COPY src/loan-load/* /src/loan-load/
 
 COPY src/supercar-load/* /src/supercar-load/
 
+COPY src/teastore-load/* /src/teastore-load/
+
 CMD ["node", "/src/index.js"]

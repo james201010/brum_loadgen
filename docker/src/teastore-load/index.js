@@ -61,6 +61,15 @@ var getPagesForSession = function(sessionGuid, isCloud, traffic, speed, loopCoun
                 });
     
     
+    pageList.push({ host : appBaseUrl,
+                    page : "/tools.descartes.teastore.webui/loginAction",
+                    traffic: traffic,
+                    speed: speed,
+                    drop : dropArray[0],
+                    beacon : "standardBeacon",
+                    method: "post",
+                    headers: {"deployment": deployment, "sessionId": sessionGuid}
+                });
 
     pageList.push({ host : appBaseUrl,
                     page : "/tools.descartes.teastore.webui/category?category=2&page=1",
@@ -73,7 +82,17 @@ var getPagesForSession = function(sessionGuid, isCloud, traffic, speed, loopCoun
                 });
 
     pageList.push({ host : appBaseUrl,
-                    page : "/tools.descartes.teastore.webui/product?id=20"+pageSuffix,
+                    page : "/tools.descartes.teastore.webui/cartAction",
+                    traffic: "light",
+                    speed: "normal",
+                    drop : dropArray[1],
+                    beacon : "standardBeacon",
+                    method: "post",
+                    headers: {"deployment": deployment, "sessionId": sessionGuid}
+                });
+
+    pageList.push({ host : appBaseUrl,
+                    page : "/tools.descartes.teastore.webui/product?id=20",
                     traffic: traffic,
                     speed: speed,
                     drop : dropArray[2],
@@ -83,7 +102,27 @@ var getPagesForSession = function(sessionGuid, isCloud, traffic, speed, loopCoun
                 });
 
     pageList.push({ host : appBaseUrl,
-                    page : "/tools.descartes.teastore.webui/product?id=115"+pageSuffix,
+                    page : "/tools.descartes.teastore.webui/cartAction",
+                    traffic: "light",
+                    speed: "normal",
+                    drop : dropArray[2],
+                    beacon : "standardBeacon",
+                    method: "post",
+                    headers: {"deployment": deployment, "sessionId": sessionGuid}
+                });
+
+    pageList.push({ host : appBaseUrl,
+                    page : "/tools.descartes.teastore.webui/cart",
+                    traffic: traffic,
+                    speed: speed,
+                    drop : dropArray[2],
+                    beacon : "standardBeacon",
+                    method: "get",
+                    headers: {"deployment": deployment, "sessionId": sessionGuid}
+                });
+
+    pageList.push({ host : appBaseUrl,
+                    page : "/tools.descartes.teastore.webui/order",
                     traffic: traffic,
                     speed: speed,
                     drop : dropArray[2],
@@ -125,7 +164,7 @@ var getPagesForSession = function(sessionGuid, isCloud, traffic, speed, loopCoun
 	for (var i = 1; i <= loopCount; i++) {
 
         pageList.push({ host : appBaseUrl,
-                        page : "/tools.descartes.teastore.webui/"+pageSuffix,
+                        page : "/tools.descartes.teastore.webui/",
                         traffic: traffic,
                         speed: speed,
                         drop : dropArray[3],
@@ -135,7 +174,7 @@ var getPagesForSession = function(sessionGuid, isCloud, traffic, speed, loopCoun
                     });
 
         pageList.push({ host : appBaseUrl,
-                        page : "/tools.descartes.teastore.webui/login"+pageSuffix,
+                        page : "/tools.descartes.teastore.webui/login",
                         traffic: traffic,
                         speed: speed,
                         drop : dropArray[3],
