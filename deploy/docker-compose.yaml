@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+
+
+  browser-load:
+    image: public.ecr.aws/w3n5a5m8/brum_loadgen:latest
+    container_name: supercar-load
+    env_file: application.env
+    environment:
+      - ENABLE_SUPERCAR_LOAD=1
+      - ENABLE_BROWSER_LOAD=0
+      - ENABLE_APPROVAL_LOAD=0
+      - ENABLE_POLICY_LOAD=0
+      - ENABLE_LOAN_LOAD=0
+    restart: always
+
+
